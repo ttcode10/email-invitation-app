@@ -46,6 +46,6 @@ Tasks
 │   ├── Waiting state and spinner
 │   └── Animation
 └── Miscellaneous
-    ├── Logo and hero image
+    ├── Logo and favicon
     └── README.md
 ```
