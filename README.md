@@ -3,11 +3,16 @@
 An email sign up page [Demo Link](https://email-invitation-app.vercel.app)
 
 Built with
-![](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![](https://img.shields.io/badge/Chakra_UI-319795?style=flat-square&logo=chakraui&logoColor=white)
-![](https://img.shields.io/badge/Axios-5A29E4?style=flat-square&logo=Axios&logoColor=white)
-![](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
+<a href="http://react.dev/" target="_blank">![](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+</a>
+<a href="https://www.typescriptlang.org/" target="_blank">![](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+</a>
+<a href="https://chakra-ui.com/" target="_blank">![](https://img.shields.io/badge/Chakra_UI-319795?style=flat-square&logo=chakraui&logoColor=white)
+</a>
+<a href="https://axios-http.com/" target="_blank">![](https://img.shields.io/badge/Axios-5A29E4?style=flat-square&logo=Axios&logoColor=white)
+</a>
+<a href="https://vercel.com/" target="_blank">![](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
+</a>
 
 Version. Commits. Unit Test Coverage. Pipeline State.
 
