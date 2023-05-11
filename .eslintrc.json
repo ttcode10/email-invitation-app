@@ -21,6 +21,10 @@
   ],
   "rules": {
     "no-unused-vars": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
-
