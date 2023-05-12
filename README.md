@@ -9,6 +9,8 @@ Built with
 </a>
 <a href="https://chakra-ui.com/" target="_blank">![](https://img.shields.io/badge/Chakra_UI-319795?style=flat-square&logo=chakraui&logoColor=white)
 </a>
+<a href="https://styled-components.com/" target="_blank">![](https://img.shields.io/badge/styledcomponents-DB7093?style=flat-square&logo=styledcomponents&logoColor=white)
+</a>
 <a href="https://axios-http.com/" target="_blank">![](https://img.shields.io/badge/Axios-5A29E4?style=flat-square&logo=Axios&logoColor=white)
 </a>
 <a href="https://vercel.com/" target="_blank">![](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
