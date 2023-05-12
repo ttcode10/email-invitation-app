@@ -25,4 +25,4 @@ const Wrapper = styled.div`
 
 const FootNote = styled(SmText)`
 	color: ${colors.secondaryGray};
-`
+`;
