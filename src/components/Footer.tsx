@@ -7,8 +7,8 @@ import { SmText } from './Typography';
 export const Footer = () => (
 	<Wrapper>
 		<Container>
-			<SmText>Made with ♥ in Sydney.</SmText>
-			<SmText>© 2023 Broccoli & Co. All rights reserved.</SmText>
+			<FootNote>Made with ♥ in Sydney.</FootNote>
+			<FootNote>© 2023 Broccoli & Co. All rights reserved.</FootNote>
 		</Container>
 	</Wrapper>
 );
@@ -22,3 +22,7 @@ const Wrapper = styled.div`
 	box-sizing: content-box;
 	text-align: center;
 `;
+
+const FootNote = styled(SmText)`
+	color: ${colors.secondaryGray};
+`
