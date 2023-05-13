@@ -14,7 +14,7 @@ import { Divider } from './Divider';
 
 export const Modal = ({ modalTitle, modalBody, modalFooter, isOpen, onClose, ...props }: Props) => {
 	return (
-		<BaseModal isOpen={isOpen} onClose={onClose}>
+		<BaseModal isOpen={isOpen} onClose={onClose} {...props}>
 			<ModalOverlay />
 			<ModalContent>
 				<MainWrapper>
@@ -23,7 +23,7 @@ export const Modal = ({ modalTitle, modalBody, modalFooter, isOpen, onClose, ...
 						<Divider />
 					</ModalHeader>
 					<ModalBody>{modalBody}</ModalBody>
-					<ModalFooter {...props}>{modalFooter}</ModalFooter>
+					<ModalFooter>{modalFooter}</ModalFooter>
 				</MainWrapper>
 			</ModalContent>
 		</BaseModal>

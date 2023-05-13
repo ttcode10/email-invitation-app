@@ -15,7 +15,9 @@ const Home = () => {
 					<H1Heading>to enjoy every day.</H1Heading>
 					<SubHeading>Be the first to know when we launch.</SubHeading>
 					<>
-						<OutlineButton onClick={onOpen}>Request an invite</OutlineButton>
+						<OutlineButton onClick={onOpen} data-testid="requestEmailButton">
+							Request an invite
+						</OutlineButton>
 						<Modal
 							modalTitle="Request an invite"
 							modalBody="sfsdfdsf"
