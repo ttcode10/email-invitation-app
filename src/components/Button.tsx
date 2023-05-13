@@ -8,8 +8,8 @@ export const SolidButton = ({ children, ...props }: Props) => (
 	</BaseButton>
 );
 
-export const OutlineButton = ({ children, ...props }: Props) => (
-	<BaseButton colorScheme={colorScheme} variant="outline" {...props}>
+export const OutlineButton = ({ children, onClick, ...props }: Props) => (
+	<BaseButton colorScheme={colorScheme} variant="outline" onClick={onClick} {...props}>
 		{children}
 	</BaseButton>
 );
@@ -28,4 +28,5 @@ export const LinkButton = ({ children, ...props }: Props) => (
 
 interface Props {
 	children?: ReactNode;
+	onClick?: () => void;
 }

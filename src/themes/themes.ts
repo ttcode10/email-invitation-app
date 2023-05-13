@@ -7,6 +7,7 @@ export const colors = {
 	primaryGray: '#1A202C',
 	secondaryGray: '#4A5568',
 	primaryGreen: '#2C7A7B',
+	secondaryGreen: '#38B2AC',
 };
 
 export const sizes = {
