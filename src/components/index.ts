@@ -7,3 +7,4 @@ export * from './Typography';
 export * from './Button';
 export { Modal } from './Modal';
 export { Divider } from './Divider';
+export { FormItem } from './FormItem';

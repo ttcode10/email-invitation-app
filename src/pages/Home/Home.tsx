@@ -1,11 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useDisclosure } from '@chakra-ui/react';
-import { Container, H1Heading, LgText, OutlineButton, Modal } from '../../components';
+import { Container, H1Heading, LgText, OutlineButton, Modal, FormItem } from '../../components';
 import { sizes } from '../../themes';
 
 const Home = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
+
+	const Form = () => (
+		<>
+			<FormItem inputType="text" placeholder="Full name" isRequired={true} />
+			<FormItem inputType="email" placeholder="Email" isRequired={true} />
+			<FormItem inputType="email" placeholder="Confirm Email" isRequired={true} />
+		</>
+	);
+
+	const SubmitButton = () => <OutlineButton>Send</OutlineButton>;
 
 	return (
 		<Content>
@@ -20,8 +30,8 @@ const Home = () => {
 						</OutlineButton>
 						<Modal
 							modalTitle="Request an invite"
-							modalBody="sfsdfdsf"
-							modalFooter="dsdf"
+							modalBody={<Form />}
+							modalFooter={<SubmitButton />}
 							isOpen={isOpen}
 							onClose={onClose}
 						/>
