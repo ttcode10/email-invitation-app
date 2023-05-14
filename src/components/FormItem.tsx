@@ -2,38 +2,37 @@ import React from 'react';
 import { FormControl, Input, FormErrorMessage } from '@chakra-ui/react';
 import { colors, colorScheme, sizes } from '../themes';
 import styled from 'styled-components';
+import { useField } from 'formik';
 
-export const FormItem = ({
-	inputType,
-	placeholder,
-	value,
-	isRequired,
-	isInvalid,
-	errorMessage,
-}: Props) => (
-	<Wrapper>
-		<FormControl isRequired={isRequired} isInvalid={isInvalid}>
-			<Input
-				type={inputType}
-				placeholder={placeholder}
-				isInvalid={isInvalid}
-				errorBorderColor={isInvalid ? colors.red : undefined}
-				colorScheme={colorScheme}
-				focusBorderColor={colors.secondaryGreen}
-				htmlSize={100}
-				value={value}
-			/>
-			{isInvalid && errorMessage && <FormErrorMessage>{errorMessage}</FormErrorMessage>}
-		</FormControl>
-	</Wrapper>
-);
+export const FormItem = ({ name, type, placeholder, ...props }: Props) => {
+	const [field, meta] = useField(name);
+	const isInvalid = meta.touched && !!meta.error;
+
+	return (
+		<Wrapper>
+			<FormControl isInvalid={isInvalid}>
+				<Input
+					{...field}
+					{...props}
+					name={name}
+					type={type}
+					placeholder={placeholder}
+					colorScheme={colorScheme}
+					errorBorderColor={isInvalid ? colors.red : undefined}
+					focusBorderColor={colors.secondaryGreen}
+					htmlSize={100}
+					value={field.value}
+				/>
+				{isInvalid && <FormErrorMessage>{meta.error}</FormErrorMessage>}
+			</FormControl>
+		</Wrapper>
+	);
+};
 
 interface Props {
-	inputType: string;
+	name: string;
+	type: string;
 	placeholder: string;
-	isRequired: boolean;
-	isInvalid?: boolean;
-	errorMessage?: string;
 	value?: string;
 }
 

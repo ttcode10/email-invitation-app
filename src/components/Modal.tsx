@@ -12,7 +12,14 @@ import { H4Heading } from './Typography';
 import { sizes } from '../themes';
 import { Divider } from './Divider';
 
-export const Modal = ({ modalTitle, modalBody, modalFooter, isOpen, onClose, ...props }: Props) => {
+export const Modal = ({
+	modalTitle,
+	modalBody,
+	modalFooter,
+	isOpen,
+	onClose,
+	...props
+}: Props) => {
 	return (
 		<BaseModal isOpen={isOpen} onClose={onClose} {...props}>
 			<ModalOverlay />

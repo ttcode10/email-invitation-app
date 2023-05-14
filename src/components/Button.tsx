@@ -9,7 +9,12 @@ export const SolidButton = ({ children, ...props }: Props) => (
 );
 
 export const OutlineButton = ({ children, onClick, ...props }: Props) => (
-	<BaseButton colorScheme={colorScheme} variant="outline" onClick={onClick} {...props}>
+	<BaseButton
+		colorScheme={colorScheme}
+		variant="outline"
+		onClick={onClick}
+		{...props}
+	>
 		{children}
 	</BaseButton>
 );
