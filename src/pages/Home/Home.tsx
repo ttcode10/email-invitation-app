@@ -16,14 +16,14 @@ import { formSchema } from './schemas/form-validation';
 const Home = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 
-	const onSubmit = async (values: any, actions: { resetForm: () => void; }) => {
+	const onSubmit = async (values: any, actions: { resetForm: () => void }) => {
 		await new Promise((resolve) => setTimeout(resolve, 1000));
 		actions.resetForm();
 	};
 
 	const EmailForm = () => (
 		<Formik
-			initialValues={{ name: '', email: '', confirmEmail: '' }}
+			initialValues={{ userName: '', email: '', confirmEmail: '' }}
 			validationSchema={formSchema}
 			onSubmit={onSubmit}
 		>
@@ -36,12 +36,17 @@ const Home = () => {
 						type="email"
 						placeholder="Confirm email"
 					/>
+					<SubmitButton
+						isDisabled={isSubmitting}
+						isLoading={isSubmitting}
+						type="submit"
+					>
+						Send
+					</SubmitButton>
 				</Form>
 			)}
 		</Formik>
 	);
-
-	const SubmitButton = () => <OutlineButton>Send</OutlineButton>;
 
 	return (
 		<Content>
@@ -57,7 +62,6 @@ const Home = () => {
 						<Modal
 							modalTitle="Request an invite"
 							modalBody={<EmailForm />}
-							modalFooter={<SubmitButton />}
 							isOpen={isOpen}
 							onClose={onClose}
 						/>
@@ -82,6 +86,11 @@ const Wrapper = styled.div`
 
 const SubHeading = styled(LgText)`
 	margin: ${sizes.double} 0;
+`;
+
+const SubmitButton = styled(OutlineButton)`
+	width: 100%;
+	margin-top: ${sizes.oneHalf};
 `;
 
 export default Home;

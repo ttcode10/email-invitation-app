@@ -40,7 +40,7 @@ export const Modal = ({
 interface Props {
 	modalTitle: string;
 	modalBody: ReactNode;
-	modalFooter: ReactNode;
+	modalFooter?: ReactNode;
 	isOpen: boolean;
 	onClose: () => void;
 }
