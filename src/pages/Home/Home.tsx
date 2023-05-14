@@ -49,10 +49,13 @@ const Home = () => {
 							Request an invite
 						</OutlineButton>
 						<Modal
-							modalTitle="Request an invite"
+							modalTitle={submitSuccess ? 'All done!' : 'Request an invite'}
 							modalBody={
 								submitSuccess ? (
-									<SubmitSuccess onClose={onClose} clearLastResult={resetResponse} />
+									<SubmitSuccess
+										onClose={onClose}
+										clearLastResult={resetResponse}
+									/>
 								) : (
 									<EmailForm
 										handleSubmit={handleSubmit}
