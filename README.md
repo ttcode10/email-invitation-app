@@ -51,7 +51,8 @@ Tasks
 │   ├── Homepage background, header and footer
 │   ├── Modal
 │   ├── Form fields
-│   └── Input validation
+│   ├── Input validation
+│   └── Success and error message
 ├── Data transmission
 │   ├── Axios setup
 │   ├── Post data
@@ -59,8 +60,7 @@ Tasks
 │   └── Failed response
 ├── UX improvements
 │   ├── Responsive web
-│   ├── Waiting state and spinner
-│   └── Animation
+│   └── Waiting state and spinner
 └── Miscellaneous
     ├── Logo and favicon
     └── README.md
