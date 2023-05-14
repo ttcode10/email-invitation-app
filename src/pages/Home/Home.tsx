@@ -14,7 +14,8 @@ import { useAxios } from '../../hooks';
 
 const Home = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
-	const { response, error, loading, resetResponse, resetError, axiosFetch } = useAxios();
+	const { response, error, loading, resetResponse, resetError, axiosFetch } =
+		useAxios();
 
 	const handleSubmit = async (
 		values: object,
@@ -44,31 +45,29 @@ const Home = () => {
 					<H1Heading>A better way</H1Heading>
 					<H1Heading>to enjoy every day.</H1Heading>
 					<SubHeading>Be the first to know when we launch.</SubHeading>
-					<>
-						<OutlineButton onClick={onOpen} data-testid="requestEmailButton">
-							Request an invite
-						</OutlineButton>
-						<Modal
-							modalTitle={submitSuccess ? 'All done!' : 'Request an invite'}
-							modalBody={
-								submitSuccess ? (
-									<SubmitSuccess
-										onClose={onClose}
-										clearLastResult={resetResponse}
-									/>
-								) : (
-									<EmailForm
-										handleSubmit={handleSubmit}
-										loading={loading}
-										error={error}
-										clearError={resetError}
-									/>
-								)
-							}
-							isOpen={isOpen}
-							onClose={onClose}
-						/>
-					</>
+					<OutlineButton onClick={onOpen} data-testid="requestEmailButton">
+						Request an invite
+					</OutlineButton>
+					<Modal
+						modalTitle={submitSuccess ? 'All done!' : 'Request an invite'}
+						modalBody={
+							submitSuccess ? (
+								<SubmitSuccess
+									onClose={onClose}
+									clearLastResult={resetResponse}
+								/>
+							) : (
+								<EmailForm
+									handleSubmit={handleSubmit}
+									loading={loading}
+									error={error}
+									clearError={resetError}
+								/>
+							)
+						}
+						isOpen={isOpen}
+						onClose={onClose}
+					/>
 				</Wrapper>
 			</Container>
 		</Content>
