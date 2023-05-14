@@ -18,7 +18,7 @@ export const FormItem = ({ name, type, placeholder, ...props }: Props) => {
 					type={type}
 					placeholder={placeholder}
 					colorScheme={colorScheme}
-					errorBorderColor={isInvalid ? colors.red : undefined}
+					errorBorderColor={isInvalid ? colors.redLight : undefined}
 					focusBorderColor={colors.secondaryGreen}
 					htmlSize={100}
 					value={field.value}
