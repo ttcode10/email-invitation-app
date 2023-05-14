@@ -8,7 +8,8 @@ export const colors = {
 	secondaryGray: '#4A5568',
 	primaryGreen: '#2C7A7B',
 	secondaryGreen: '#38B2AC',
-	red: '#F56565',
+	redLight: '#F56565',
+	redDark: '#E53E3E',
 };
 
 export const sizes = {

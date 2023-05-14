@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Heading as BaseHeading, Text as BaseText } from '@chakra-ui/react';
-import { fontFamily } from '../themes';
+import { colors, fontFamily } from '../themes';
+import styled from 'styled-components';
 
 export const H1Heading = ({ children, ...props }: Props) => (
 	<BaseHeading as="h1" size="2xl" fontFamily={fontFamily} {...props}>
@@ -46,6 +47,10 @@ export const SmText = ({ children, ...props }: Props) => (
 		{children}
 	</BaseText>
 );
+
+export const ErrorText = styled(SmText)`
+	color: ${colors.redDark};
+`;
 
 interface Props {
 	children?: ReactNode;
