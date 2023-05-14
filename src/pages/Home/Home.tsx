@@ -9,10 +9,33 @@ import {
 	Modal,
 } from '../../components';
 import { sizes } from '../../themes';
-import { EmailForm } from './components/EmailForm';
+import { EmailForm, SubmitSuccess } from './components';
+import { useAxios } from '../../hooks';
 
 const Home = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
+	const { response, error, loading, resetResponse, resetError, axiosFetch } = useAxios();
+
+	const handleSubmit = async (
+		values: object,
+		actions: { resetForm: () => void }
+	) => {
+		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+		// @ts-ignore
+		const { name, email } = values;
+
+		axiosFetch({
+			method: 'POST',
+			payloads: {
+				name: name,
+				email: email,
+			},
+		});
+
+		actions.resetForm();
+	};
+
+	const submitSuccess = response === 'Registered';
 
 	return (
 		<Content>
@@ -27,7 +50,18 @@ const Home = () => {
 						</OutlineButton>
 						<Modal
 							modalTitle="Request an invite"
-							modalBody={<EmailForm />}
+							modalBody={
+								submitSuccess ? (
+									<SubmitSuccess onClose={onClose} clearLastResult={resetResponse} />
+								) : (
+									<EmailForm
+										handleSubmit={handleSubmit}
+										loading={loading}
+										error={error}
+										clearError={resetError}
+									/>
+								)
+							}
 							isOpen={isOpen}
 							onClose={onClose}
 						/>
