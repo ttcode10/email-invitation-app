@@ -20,8 +20,6 @@ Built with
 <a href="https://vercel.com/" target="_blank">![](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
 </a>
 
-Version. Commits. Unit Test Coverage. Pipeline State.
-
 ## Features
 
 - Enter name and email to request invitation
