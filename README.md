@@ -63,3 +63,12 @@ Tasks
     ├── Logo and favicon
     └── README.md
 ```
+
+## Considerations
+Build an extendable commercial-class app for a code test:
+
+1. Encapsulate the 3rd party UI components so we can import locally (maintain a single source of truth) and enable "modify once change everywhere" (keep UI consistent).
+2. Detach logic layer from presentation layer (e.g. keep axios API calling method and form validation rules in independent files).
+3. Use custom hooks (useAxios) to enhance reusability and extendability.
+4. Introduce Formik and Yup in form building and validation, so we don't need to write `onChange` `onBlur` on every input field, thus making the code much cleaner.
+5. Consider user experience. For example, use `rem` for font size so the text can be resized in different screen accordingly; disable the button and display a spinner after submit form to prevent over-clicking.
